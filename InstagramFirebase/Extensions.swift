@@ -35,6 +35,8 @@ extension UIView {
                 paddingTop: CGFloat, paddingRight: CGFloat, paddingBottom: CGFloat, paddingLeft: CGFloat,
                 width: CGFloat, height: CGFloat) {
         
+        translatesAutoresizingMaskIntoConstraints = false
+        
         if let top = top {
             topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
         }

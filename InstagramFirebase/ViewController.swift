@@ -78,7 +78,6 @@ class ViewController: UIViewController {
             signUpButton
             ])
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 16
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
