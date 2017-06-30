@@ -85,19 +85,8 @@ class ViewController: UIViewController {
         
         view.addSubview(stackView)
         
-        NSLayoutConstraint.activate([
-            stackView.heightAnchor.constraint(equalToConstant: 200),
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
-            stackView.topAnchor.constraint(equalTo: plusPhotoButton.bottomAnchor, constant: 20)
-            ])
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, right: view.rightAnchor, bottom: nil, left: view.leftAnchor,
+                         paddingTop: 20, paddingRight: -40, paddingBottom: 0, paddingLeft: 40,
+                         width: 0, height: 200)
     }
-
 }
-
-
-
-
-
-
-
