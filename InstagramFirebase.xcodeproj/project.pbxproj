@@ -14,6 +14,7 @@
 		5AFBF1A81F06CD3000CA335D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBF1A61F06CD3000CA335D /* LaunchScreen.storyboard */; };
 		5AFBF1B31F06CD3000CA335D /* InstagramFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF1B21F06CD3000CA335D /* InstagramFirebaseTests.swift */; };
 		5AFBF1BE1F06CD3000CA335D /* InstagramFirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF1BD1F06CD3000CA335D /* InstagramFirebaseUITests.swift */; };
+		5AFBF1CD1F06D81A00CA335D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF1CC1F06D81A00CA335D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5AFBF1B91F06CD3000CA335D /* InstagramFirebaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramFirebaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFBF1BD1F06CD3000CA335D /* InstagramFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFirebaseUITests.swift; sourceTree = "<group>"; };
 		5AFBF1BF1F06CD3000CA335D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AFBF1CC1F06D81A00CA335D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		5AFBF19C1F06CD3000CA335D /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				5AFBF1CB1F06D7FA00CA335D /* Utils */,
 				5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */,
 				5AFBF19F1F06CD3000CA335D /* ViewController.swift */,
 				5AFBF1A11F06CD3000CA335D /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				5AFBF1BF1F06CD3000CA335D /* Info.plist */,
 			);
 			path = InstagramFirebaseUITests;
+			sourceTree = "<group>";
+		};
+		5AFBF1CB1F06D7FA00CA335D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AFBF1CC1F06D81A00CA335D /* Extensions.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFBF1A01F06CD3000CA335D /* ViewController.swift in Sources */,
+				5AFBF1CD1F06D81A00CA335D /* Extensions.swift in Sources */,
 				5AFBF19E1F06CD3000CA335D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
