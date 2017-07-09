@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.addTarget(self, action: #selector(handlePlusPhoto), for: .touchUpInside)
         return button
     }()
     
@@ -68,6 +69,14 @@ class ViewController: UIViewController {
         return button
     }()
     
+    func handlePlusPhoto() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
     func handleTextInputChange() {
         let emailIsValid = emailTextField.text?.characters.count ?? 0 > 0
         let usernameIsValid = usernameTextField.text?.characters.count ?? 0 > 0
@@ -97,13 +106,21 @@ class ViewController: UIViewController {
             }
             
             print("Successfully created user \(user?.uid ?? "")")
-            Database.database().reference().child("users").setValue(values, withCompletionBlock: { (error, reference) in
+            
+            guard let uid = user?.uid else { return }
+            
+            let dictionaryValues = ["username": username]
+            let values = [uid: dictionaryValues]
+            
+            Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (error, reference) in
+                
                 if let error = error {
-                    print("Failed to save user info to database: \(error)")
+                    print("Failed to save user info into db:", error)
                     return
                 }
                 
-                print("Successfully saved user info to database.")
+                print("Successfully saved user info to db")
+                
             })
         }
     }
@@ -135,5 +152,21 @@ class ViewController: UIViewController {
         stackView.anchor(top: plusPhotoButton.bottomAnchor, right: view.rightAnchor, bottom: nil, left: view.leftAnchor,
                          paddingTop: 20, paddingRight: -40, paddingBottom: 0, paddingLeft: 40,
                          width: 0, height: 200)
+    }
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            plusPhotoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        
+        // Make perfectly round.
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width/2
+        plusPhotoButton.layer.masksToBounds = true
+        
+        dismiss(animated: true, completion: nil)
     }
 }
