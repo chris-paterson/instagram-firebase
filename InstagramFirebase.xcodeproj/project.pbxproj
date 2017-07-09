@@ -10,6 +10,8 @@
 		50A143927566A68C3914DCD3 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15CFF6F72CFD2FFC52F74DE /* Pods_InstagramFirebase.framework */; };
 		5A3EEB821F127C2200626949 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB811F127C2200626949 /* MainTabBarController.swift */; };
 		5A3EEB841F127D0A00626949 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB831F127D0A00626949 /* UserProfileController.swift */; };
+		5A3EEB871F1285C600626949 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB861F1285C600626949 /* UserProfileHeader.swift */; };
+		5A3EEB891F128F5000626949 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB881F128F5000626949 /* User.swift */; };
 		5AFBF19E1F06CD3000CA335D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */; };
 		5AFBF1A01F06CD3000CA335D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF19F1F06CD3000CA335D /* ViewController.swift */; };
 		5AFBF1A31F06CD3000CA335D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBF1A11F06CD3000CA335D /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		3721FAD6DE047D84B3335B58 /* Pods-InstagramFirebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebaseUITests/Pods-InstagramFirebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A3EEB811F127C2200626949 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5A3EEB831F127D0A00626949 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		5A3EEB861F1285C600626949 /* UserProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		5A3EEB881F128F5000626949 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5AFBF19A1F06CD3000CA335D /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AFBF19F1F06CD3000CA335D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3EEB851F1285B000626949 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5A3EEB831F127D0A00626949 /* UserProfileController.swift */,
+				5A3EEB861F1285C600626949 /* UserProfileHeader.swift */,
+			);
+			name = UserProfile;
+			sourceTree = "<group>";
+		};
 		5AFBF1911F06CD3000CA335D = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +135,12 @@
 		5AFBF19C1F06CD3000CA335D /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				5A3EEB851F1285B000626949 /* UserProfile */,
 				5AFBF1CB1F06D7FA00CA335D /* Utils */,
 				5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */,
 				5A3EEB811F127C2200626949 /* MainTabBarController.swift */,
-				5A3EEB831F127D0A00626949 /* UserProfileController.swift */,
 				5AFBF19F1F06CD3000CA335D /* ViewController.swift */,
+				5A3EEB881F128F5000626949 /* User.swift */,
 				5AFBF1A11F06CD3000CA335D /* Main.storyboard */,
 				5AFBF1A41F06CD3000CA335D /* Assets.xcassets */,
 				5AFBF1A61F06CD3000CA335D /* LaunchScreen.storyboard */,
@@ -473,8 +487,10 @@
 				5AFBF1A01F06CD3000CA335D /* ViewController.swift in Sources */,
 				5AFBF1CD1F06D81A00CA335D /* Extensions.swift in Sources */,
 				5A3EEB821F127C2200626949 /* MainTabBarController.swift in Sources */,
+				5A3EEB871F1285C600626949 /* UserProfileHeader.swift in Sources */,
 				5A3EEB841F127D0A00626949 /* UserProfileController.swift in Sources */,
 				5AFBF19E1F06CD3000CA335D /* AppDelegate.swift in Sources */,
+				5A3EEB891F128F5000626949 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
