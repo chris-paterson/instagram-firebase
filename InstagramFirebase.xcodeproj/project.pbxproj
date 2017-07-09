@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50A143927566A68C3914DCD3 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15CFF6F72CFD2FFC52F74DE /* Pods_InstagramFirebase.framework */; };
+		5A3EEB821F127C2200626949 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB811F127C2200626949 /* MainTabBarController.swift */; };
+		5A3EEB841F127D0A00626949 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3EEB831F127D0A00626949 /* UserProfileController.swift */; };
 		5AFBF19E1F06CD3000CA335D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */; };
 		5AFBF1A01F06CD3000CA335D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF19F1F06CD3000CA335D /* ViewController.swift */; };
 		5AFBF1A31F06CD3000CA335D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBF1A11F06CD3000CA335D /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		00E6DE0F5B8EA5158C18EE59 /* Pods_InstagramFirebaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirebaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3721FAD6DE047D84B3335B58 /* Pods-InstagramFirebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebaseUITests/Pods-InstagramFirebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5A3EEB811F127C2200626949 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A3EEB831F127D0A00626949 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		5AFBF19A1F06CD3000CA335D /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AFBF19F1F06CD3000CA335D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				5AFBF1CB1F06D7FA00CA335D /* Utils */,
 				5AFBF19D1F06CD3000CA335D /* AppDelegate.swift */,
+				5A3EEB811F127C2200626949 /* MainTabBarController.swift */,
+				5A3EEB831F127D0A00626949 /* UserProfileController.swift */,
 				5AFBF19F1F06CD3000CA335D /* ViewController.swift */,
 				5AFBF1A11F06CD3000CA335D /* Main.storyboard */,
 				5AFBF1A41F06CD3000CA335D /* Assets.xcassets */,
@@ -466,6 +472,8 @@
 			files = (
 				5AFBF1A01F06CD3000CA335D /* ViewController.swift in Sources */,
 				5AFBF1CD1F06D81A00CA335D /* Extensions.swift in Sources */,
+				5A3EEB821F127C2200626949 /* MainTabBarController.swift in Sources */,
+				5A3EEB841F127D0A00626949 /* UserProfileController.swift in Sources */,
 				5AFBF19E1F06CD3000CA335D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +733,7 @@
 				5AFBF1C41F06CD3000CA335D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AFBF1C51F06CD3000CA335D /* Build configuration list for PBXNativeTarget "InstagramFirebaseTests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +742,7 @@
 				5AFBF1C71F06CD3000CA335D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AFBF1C81F06CD3000CA335D /* Build configuration list for PBXNativeTarget "InstagramFirebaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +751,7 @@
 				5AFBF1CA1F06CD3000CA335D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
