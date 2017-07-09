@@ -107,20 +107,33 @@ class ViewController: UIViewController {
             
             print("Successfully created user \(user?.uid ?? "")")
             
-            guard let uid = user?.uid else { return }
+            guard let image = self.plusPhotoButton.imageView?.image else { return }
+            guard let uploadData = UIImageJPEGRepresentation(image, 0.3) else { return }
+            let filename = NSUUID().uuidString
             
-            let dictionaryValues = ["username": username]
-            let values = [uid: dictionaryValues]
-            
-            Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (error, reference) in
-                
+            Storage.storage().reference().child("profile_images").child(filename).putData(uploadData, metadata: nil, completion: { (storageMetaData, error) in
                 if let error = error {
-                    print("Failed to save user info into db:", error)
-                    return
+                    print("Failed to upload profile image: \(error)")
                 }
                 
-                print("Successfully saved user info to db")
+                guard let profileImageUrl = storageMetaData?.downloadURL()?.absoluteString else { return }
+                print("Succesfully uploaded profile image: \(profileImageUrl)")
                 
+                guard let uid = user?.uid else { return }
+
+                let dictionaryValues = ["username": username, "profileImageUrl": profileImageUrl]
+                let values = [uid: dictionaryValues]
+
+                Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (error, reference) in
+
+                    if let error = error {
+                        print("Failed to save user info into db: \(error)")
+                        return
+                    }
+                    
+                    print("Successfully saved user info to db")
+                    
+                })
             })
         }
     }
